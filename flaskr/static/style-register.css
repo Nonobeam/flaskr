@@ -1,0 +1,153 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-image:linear-gradient(120deg, #08509f 0%, #f27123 50%, #51b748 75%);
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-track{
+    background-color: rgb(255, 183, 0);
+}
+
+.background{
+    background-color: rgb(8, 125, 155);
+}
+
+
+.container{
+    position: absolute;
+    left: 500px;
+    top: 10%;
+    width: 900px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(234, 234, 234);
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.3),
+                15px 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.register{
+    position: absolute;
+    font-size: 40px;
+    font-family: Paytone One;
+    font-weight: lighter;
+    left: 275px;
+    text-align: center;
+    width:  350px;
+    border-bottom: 0.5px solid;
+}
+
+.container>label{
+    position: relative;
+    margin: 5px;
+    left: 120px;
+    top: 100px;
+    width: fit-content;
+    font-family: Josefin Sans;
+    font-size: 25px;
+    color: rgb(8, 125, 155);
+    z-index: 2;
+}
+
+.container>input{
+    position: relative;
+    margin: 5px;
+    left: 120px;
+    top: 140px;
+    width: 600px;
+    height: 30px;
+    border: 0px;
+    text-align: 2px;
+    outline: none;
+    border: 0;
+    border-bottom: 3px solid #dfdfdf;
+    background-color: rgb(234, 234, 234);
+    box-shadow: 5px 10px 30px rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.register-button{
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 520px;
+    padding: 10px;
+    font-family: Josefin Sans;
+    font-size: 25px;
+    color: white;
+    width: 100px;
+    background-color: rgb(8, 125, 155);
+    border: 0;
+    border-radius: 5%;
+}
+
+.register-button:hover{
+    color: rgb(8, 125, 155);
+    background-color: white;
+}
+
+.successful{
+    position: relative;
+    margin: 5px;
+    left: 810px;
+    top: 200px;
+    color: rgb(8, 125, 155);
+    width: fit-content;
+    font-size: 35px;
+    color: rgb(8, 125, 155);
+    z-index: 4;
+}
+
+.welcome-image{
+    position: relative;
+    top: 210px;
+    border-radius: 5%;
+    transform: scale(0.8);
+}
+
+input[type='text'] {
+    padding-left: 150px;
+}
+
+input:focus + label{
+    font-size: 20px;
+    top: 80px;
+    pointer-events: none;
+}
+
+.floating{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 30% 70% 55% 45% / 30% 30% 70% 70% ;
+    background-color: pink;
+    animation: moving 7s infinite;
+}
+
+@keyframes moving{
+    100%{
+        border-radius: 30% 70% 55% 45% / 30% 30% 70% 70% ;
+    }
+    20% {
+        border-radius: 17% 83% 38% 62% / 66% 9% 91% 34% ;
+    }
+    40%{
+        border-radius: 85% 15% 42% 58% / 40% 54% 46% 60% ;
+    }
+    60%{
+        border-radius: 32% 68% 33% 67% / 14% 28% 72% 86% ;
+    }
+    80%{
+        border-radius: 32% 68% 33% 67% / 54% 28% 72% 46% ;
+    }
+    0%{
+        border-radius:30% 70% 55% 45% / 30% 30% 70% 70% ;
+    }   
+}
